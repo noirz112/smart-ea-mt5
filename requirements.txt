@@ -1,0 +1,6 @@
+flask==2.0.1
+requests==2.26.0
+schedule==1.1.0
+psycopg2==2.9.3  # Untuk PostgreSQL
+pytest==7.1.2  # Untuk unit testing
+# Tambahkan dependensi lain jika diperlukan, seperti untuk BytePlus SDK

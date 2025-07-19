@@ -1,0 +1,35 @@
+services:
+  api:
+    image: python:3.8-slim
+    volumes:
+      - .:/app
+    working_dir: /app/ai
+    command: python server_api.py
+    ports:
+      - "5000:5000"
+  scheduler:
+    image: python:3.8-slim
+    volumes:
+      - .:/app
+    working_dir: /app/ai
+    command: python scheduler.py
+  postgrest:
+    image: postgrest/postgrest
+    environment:
+      PGRST_DB_URI: "postgres://user:pass@db:5432/ea_db"
+      PGRST_DB_SCHEMA: public
+      PGRST_DB_ANON_ROLE: web_anon
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: ea_db
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:

@@ -1,0 +1,40 @@
+agent:
+  name: SmartEA_Agent
+  description: MCP Agent for Smart EA MT5
+  servers:
+    - name: mcp.config.usrlocalmcp.Persistent Knowledge Graph
+      tools:
+        - create_entities
+        - read_graph
+    - name: mcp.config.usrlocalmcp.Fetch
+      tools:
+        - fetch
+    - name: mcp.config.usrlocalmcp.Docker
+      tools:
+        - create-container
+        - deploy-compose
+        - get-logs
+        - list-containers
+    - name: mcp.config.usrlocalmcp.GitHub
+      tools:
+        - create_repository
+        - push_files
+        - create_pull_request
+  database:
+    type: PostgreSQL
+    url: postgres://user:pass@localhost:5432/ea_db
+    postgrest_url: http://localhost:3000
+  scheduler:
+    retrain_interval: 2 days
+    command: python ai/model_loop.py
+  logging:
+    level: INFO
+    file: logs/ea.log
+  api:
+    byteplus_key: YOUR_BYTEPLUS_API_KEY
+  strategies:
+    - scalping
+    - breakout
+    - reversal
+    - news
+    - trend_following
