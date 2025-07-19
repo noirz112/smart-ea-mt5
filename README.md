@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Smart EA MT5 - Super Agresif
 
 Expert Advisor (EA) MT5 super agresif namun tetap aman. EA ini mampu melakukan 20–30 trade per hari dengan drawdown rendah (<5%) dan target pertumbuhan balance cepat (5–12% per minggu).
@@ -144,3 +145,7 @@ Proprietary - All rights reserved
 4. Gunakan MCP Docker untuk manage container (create-container, get-logs).
 5. Monitor via dashboard di http://server_ip:5000/.
 6. Integrasikan MCP Fetch untuk pengambilan data real-time dan Persistent Knowledge Graph untuk logging.
+=======
+# smart-ea-mt5
+Aggressive MT5 EA for XAUUSD with AI integration
+>>>>>>> 1e4ea06ff4e0ceee8c5a2edf011aea7b5776aa71
