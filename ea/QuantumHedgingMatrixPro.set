@@ -1,0 +1,86 @@
+//+------------------------------------------------------------------+
+//|                      QuantumHedgingMatrixPro.set                 |
+//|                        Configuration File                        |
+//|                   Recommended Parameter Settings                 |
+//+------------------------------------------------------------------+
+
+// Risk Management Settings
+RiskPerTrade=0.50
+MaxDrawdown=15.00
+MaxConsecutiveLoss=3
+PauseDuration=60
+MaxPositions=20
+
+// Strategy Parameters
+ADX_Period=14
+ADX_TrendThreshold=25.00
+ADX_SidewaysThreshold=20.00
+RSI_TrendPeriod=5
+RSI_SidewaysPeriod=7
+VolumeSpikeFactor=2.00
+
+// Filter Settings
+EnableNewsFilter=1
+EnableSessionFilter=1
+PreNewsMinutes=30
+PostNewsMinutes=30
+
+//+------------------------------------------------------------------+
+//| PRESET CONFIGURATIONS                                            |
+//+------------------------------------------------------------------+
+
+// CONSERVATIVE PRESET (Lower Risk)
+// RiskPerTrade=0.25
+// MaxDrawdown=10.00
+// MaxConsecutiveLoss=2
+// MaxPositions=10
+
+// AGGRESSIVE PRESET (Higher Risk/Reward)
+// RiskPerTrade=1.00
+// MaxDrawdown=20.00
+// MaxConsecutiveLoss=5
+// MaxPositions=30
+
+// SCALPING PRESET (High Frequency)
+// RSI_TrendPeriod=3
+// RSI_SidewaysPeriod=5
+// VolumeSpikeFactor=1.50
+// MaxPositions=50
+
+//+------------------------------------------------------------------+
+//| SYMBOL-SPECIFIC SETTINGS                                         |
+//+------------------------------------------------------------------+
+
+// For XAUUSD (Gold)
+// VolumeSpikeFactor=3.00
+// ADX_TrendThreshold=30.00
+
+// For EURUSD (Major Pair)
+// VolumeSpikeFactor=1.50
+// ADX_TrendThreshold=20.00
+
+// For GBPJPY (Volatile Pair)
+// RiskPerTrade=0.30
+// MaxDrawdown=12.00
+
+//+------------------------------------------------------------------+
+//| MARKET CONDITION ADJUSTMENTS                                     |
+//+------------------------------------------------------------------+
+
+// High Volatility Markets
+// RiskPerTrade=0.30
+// MaxConsecutiveLoss=2
+// PreNewsMinutes=60
+
+// Low Volatility Markets
+// RiskPerTrade=0.75
+// MaxConsecutiveLoss=4
+// VolumeSpikeFactor=1.50
+
+// Trending Markets
+// ADX_TrendThreshold=20.00
+// MaxPositions=25
+
+// Ranging Markets
+// ADX_SidewaysThreshold=25.00
+// RSI_SidewaysPeriod=10
